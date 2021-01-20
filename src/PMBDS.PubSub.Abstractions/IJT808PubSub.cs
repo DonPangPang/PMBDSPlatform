@@ -2,6 +2,6 @@
 {
     public interface IJT808PubSub
     {
-        string TopicName { get; set; }
+        string TopicName { get;}
     }
 }
