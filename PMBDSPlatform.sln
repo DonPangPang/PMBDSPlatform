@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0B4CBBA3-9BCC-401C-8E7B-369C5361FE64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{780A233B-5C3C-4229-86C2-8CE669B0D95A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMBDS.JT808PubSubToKafka.Test", "test\PMBDS.JT808PubSubToKafka.Test\PMBDS.JT808PubSubToKafka.Test.csproj", "{3B89F656-67E0-4A46-9137-B5CFD6CD95C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMBDS.Abstractions", "src\PMBDS.Abstractions\PMBDS.Abstractions.csproj", "{CDD42662-B594-496C-A751-E24EFEAA8808}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMBDS.JT808.Gateway", "src\PMBDS.JT808.Gateway\PMBDS.JT808.Gateway.csproj", "{DD2DE013-45B7-4566-A944-C0706D60ED7A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMBDS.JT808PubSubToKafka", "src\PMBDS.JT808PubSubToKafka\PMBDS.JT808PubSubToKafka.csproj", "{BEFBD98B-2B67-420C-917D-66BA20C40C14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMBDS.PubSub.Abstractions", "src\PMBDS.PubSub.Abstractions\PMBDS.PubSub.Abstractions.csproj", "{38C67202-27A6-4D93-98FC-F78F9C45EB50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMBDS.JT808SourcePackageDispatcher", "src\PMBDS.JT808SourcePackageDispatcher\PMBDS.JT808SourcePackageDispatcher.csproj", "{CD578270-2331-4D44-AA0C-31E5B3FA43AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B89F656-67E0-4A46-9137-B5CFD6CD95C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B89F656-67E0-4A46-9137-B5CFD6CD95C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B89F656-67E0-4A46-9137-B5CFD6CD95C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B89F656-67E0-4A46-9137-B5CFD6CD95C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD42662-B594-496C-A751-E24EFEAA8808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD42662-B594-496C-A751-E24EFEAA8808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD42662-B594-496C-A751-E24EFEAA8808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD42662-B594-496C-A751-E24EFEAA8808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD2DE013-45B7-4566-A944-C0706D60ED7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD2DE013-45B7-4566-A944-C0706D60ED7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD2DE013-45B7-4566-A944-C0706D60ED7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD2DE013-45B7-4566-A944-C0706D60ED7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFBD98B-2B67-420C-917D-66BA20C40C14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFBD98B-2B67-420C-917D-66BA20C40C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFBD98B-2B67-420C-917D-66BA20C40C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFBD98B-2B67-420C-917D-66BA20C40C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C67202-27A6-4D93-98FC-F78F9C45EB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C67202-27A6-4D93-98FC-F78F9C45EB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C67202-27A6-4D93-98FC-F78F9C45EB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C67202-27A6-4D93-98FC-F78F9C45EB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD578270-2331-4D44-AA0C-31E5B3FA43AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD578270-2331-4D44-AA0C-31E5B3FA43AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD578270-2331-4D44-AA0C-31E5B3FA43AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD578270-2331-4D44-AA0C-31E5B3FA43AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B89F656-67E0-4A46-9137-B5CFD6CD95C0} = {0B4CBBA3-9BCC-401C-8E7B-369C5361FE64}
+		{CDD42662-B594-496C-A751-E24EFEAA8808} = {780A233B-5C3C-4229-86C2-8CE669B0D95A}
+		{DD2DE013-45B7-4566-A944-C0706D60ED7A} = {780A233B-5C3C-4229-86C2-8CE669B0D95A}
+		{BEFBD98B-2B67-420C-917D-66BA20C40C14} = {780A233B-5C3C-4229-86C2-8CE669B0D95A}
+		{38C67202-27A6-4D93-98FC-F78F9C45EB50} = {780A233B-5C3C-4229-86C2-8CE669B0D95A}
+		{CD578270-2331-4D44-AA0C-31E5B3FA43AC} = {780A233B-5C3C-4229-86C2-8CE669B0D95A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28649075-2E34-423A-B493-70FBB46EA9C9}
+	EndGlobalSection
+EndGlobal

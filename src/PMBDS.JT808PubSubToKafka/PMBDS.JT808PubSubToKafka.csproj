@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="JT808Partitions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PMBDS.PubSub.Abstractions\PMBDS.PubSub.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
