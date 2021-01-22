@@ -2,6 +2,7 @@
 using JT808.Protocol.Extensions;
 using JT808.Protocol.MessageBody;
 using Microsoft.Extensions.Logging;
+using PMBDS.JT808.Gateway.Handlers;
 using PMBDS.JT808.Gateway.Metadata;
 using PMBDS.PubSub.Abstractions;
 

@@ -5,7 +5,7 @@ using JT808.Protocol.Extensions;
 using JT808.Protocol.MessageBody;
 using PMBDS.JT808.Gateway.Metadata;
 
-namespace PMBDS.JT808.Gateway.MsgIdHandlers
+namespace PMBDS.JT808.Gateway.Handlers
 {
     public abstract class JT808MsgIdUdpHandlerBase
     {

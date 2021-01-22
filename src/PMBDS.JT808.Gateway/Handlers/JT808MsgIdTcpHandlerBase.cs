@@ -4,16 +4,17 @@ using JT808.Protocol.Enums;
 using JT808.Protocol.Extensions;
 using JT808.Protocol.MessageBody;
 using PMBDS.JT808.Gateway.Metadata;
+using PMBDS.JT808.Gateway.SessionManagers;
 
-namespace PMBDS.JT808.Gateway.MsgIdHandlers
+namespace PMBDS.JT808.Gateway.Handlers
 {
     public class JT808MsgIdTcpHandlerBase
     {
-        //protected JT808TcpSessionManager sessionManager { get; }
+        protected IJT808TcpSessionManager sessionManager { get; }
 
-        protected JT808MsgIdTcpHandlerBase(/*JT808TcpSessionManager sessionManager*/)
+        protected JT808MsgIdTcpHandlerBase(IJT808TcpSessionManager sessionManager)
         {
-            //this.sessionManager = sessionManager;
+            this.sessionManager = sessionManager;
             this.HandlerDict = new Dictionary<ushort, Func<JT808Request, JT808Response>>()
             {
                 {

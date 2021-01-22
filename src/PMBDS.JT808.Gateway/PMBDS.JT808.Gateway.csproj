@@ -7,17 +7,40 @@
 
   <ItemGroup>
     <Folder Include="Metadata\" />
-    <Folder Include="JT808SessionManagers\" />
+    <Folder Include="SessionManagers\" />
+    <Folder Include="PipelineFilters\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="JT808" Version="2.3.5" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PMBDS.PubSub.Abstractions\PMBDS.PubSub.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SuperSocket.Channel">
+      <HintPath>DLLs\SuperSocket.Channel.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.Primitives">
+      <HintPath>DLLs\SuperSocket.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.ProtoBase">
+      <HintPath>DLLs\SuperSocket.ProtoBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.Server">
+      <HintPath>DLLs\SuperSocket.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.SessionContainer">
+      <HintPath>DLLs\SuperSocket.SessionContainer.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.Udp">
+      <HintPath>DLLs\SuperSocket.Udp.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
