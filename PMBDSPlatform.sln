@@ -6,8 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0B4CBBA3-9BCC-401C-8E7B-369C5361FE64}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{780A233B-5C3C-4229-86C2-8CE669B0D95A}"
+	ProjectSection(SolutionItems) = preProject
+		src\docker-compose.yml = src\docker-compose.yml
+		src\README.md = src\README.md
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMBDS.JT808PubSubToKafka.Test", "test\PMBDS.JT808PubSubToKafka.Test\PMBDS.JT808PubSubToKafka.Test.csproj", "{3B89F656-67E0-4A46-9137-B5CFD6CD95C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMBDS.JT808PubSubToKafka.Test", "test\PMBDS.JT808PubSubToKafka.Test\PMBDS.JT808PubSubToKafka.Test.csproj", "{3B89F656-67E0-4A46-9137-B5CFD6CD95C0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMBDS.Abstractions", "src\PMBDS.Abstractions\PMBDS.Abstractions.csproj", "{CDD42662-B594-496C-A751-E24EFEAA8808}"
 EndProject
@@ -17,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMBDS.JT808PubSubToKafka", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMBDS.PubSub.Abstractions", "src\PMBDS.PubSub.Abstractions\PMBDS.PubSub.Abstractions.csproj", "{38C67202-27A6-4D93-98FC-F78F9C45EB50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMBDS.JT808SourcePackageDispatcher", "src\PMBDS.JT808SourcePackageDispatcher\PMBDS.JT808SourcePackageDispatcher.csproj", "{CD578270-2331-4D44-AA0C-31E5B3FA43AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMBDS.JT808SourcePackageDispatcher", "src\PMBDS.JT808SourcePackageDispatcher\PMBDS.JT808SourcePackageDispatcher.csproj", "{CD578270-2331-4D44-AA0C-31E5B3FA43AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

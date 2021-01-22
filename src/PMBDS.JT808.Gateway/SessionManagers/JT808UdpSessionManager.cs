@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using SuperSocket;
 
@@ -21,7 +22,7 @@ namespace PMBDS.JT808.Gateway.SessionManagers
             throw new System.NotImplementedException();
         }
 
-        public Task<ConcurrentDictionary<string, IAppSession>> GetSessions()
+        public Task<IEnumerable<IAppSession>> GetSessions()
         {
             throw new System.NotImplementedException();
         }
