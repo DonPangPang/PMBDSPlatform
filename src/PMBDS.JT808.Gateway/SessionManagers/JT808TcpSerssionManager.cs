@@ -1,4 +1,5 @@
-﻿using System.Collections.Concurrent;
+﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -37,7 +38,11 @@ namespace PMBDS.JT808.Gateway.SessionManagers
 
         public void Heartbeat(string identify)
         {
-            throw new System.NotImplementedException();
+            //IAppSession jt808TcpSession;
+            //if (string.IsNullOrEmpty(identify) || !this.SessionIdDict.TryGetValue(identify, out jt808TcpSession))
+            //    return;
+            //jt808TcpSession.LastActiveTime = DateTime.Now;
+            //this.SessionIdDict.TryUpdate(identify, jt808TcpSession, jt808TcpSession);
         }
 
         public void TryAdd(IAppSession session)

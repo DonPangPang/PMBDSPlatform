@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PMBDS.JT808.Gateway": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

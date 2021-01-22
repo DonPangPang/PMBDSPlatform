@@ -4,6 +4,7 @@ using JT808.Protocol.MessageBody;
 using Microsoft.Extensions.Logging;
 using PMBDS.JT808.Gateway.Handlers;
 using PMBDS.JT808.Gateway.Metadata;
+using PMBDS.JT808.Gateway.SessionManagers;
 using PMBDS.PubSub.Abstractions;
 
 namespace PMBDS.JT808.Gateway.MsgIdHandlers
@@ -15,8 +16,8 @@ namespace PMBDS.JT808.Gateway.MsgIdHandlers
 
         public JT808MsgIdUdpCustomHandler(
                     IJT808Producer jT808Producer,
-                    ILoggerFactory loggerFactory
-                    /*JT808UdpSessionManager sessionManager*/) : base(/*sessionManager*/)
+                    ILoggerFactory loggerFactory,
+                    IJT808UdpSessionManager sessionManager) : base(sessionManager)
         {
             logger = loggerFactory.CreateLogger<JT808MsgIdUdpCustomHandler>();
             this.jT808Producer = jT808Producer;
