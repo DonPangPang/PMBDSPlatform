@@ -7,10 +7,17 @@
 
   <ItemGroup>
     <Folder Include="Metadata\" />
+    <Folder Include="JT808SessionManagers\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="JT808" Version="2.3.5" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PMBDS.PubSub.Abstractions\PMBDS.PubSub.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

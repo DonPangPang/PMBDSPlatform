@@ -7,11 +7,11 @@ using PMBDS.JT808.Gateway.Metadata;
 
 namespace PMBDS.JT808.Gateway.MsgIdHandlers
 {
-    public class JT808MsgIdTcpHandlerBase
+    public abstract class JT808MsgIdUdpHandlerBase
     {
-        //protected JT808TcpSessionManager sessionManager { get; }
+        //protected JT808UdpSessionManager sessionManager { get; }
 
-        protected JT808MsgIdTcpHandlerBase(/*JT808TcpSessionManager sessionManager*/)
+        protected JT808MsgIdUdpHandlerBase(/*JT808UdpSessionManager sessionManager*/)
         {
             //this.sessionManager = sessionManager;
             this.HandlerDict = new Dictionary<ushort, Func<JT808Request, JT808Response>>()
