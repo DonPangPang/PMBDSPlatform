@@ -11,6 +11,7 @@
     <Folder Include="Metadata\" />
     <Folder Include="SessionManagers\" />
     <Folder Include="PipelineFilters\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PMBDS.JT808PubSubToKafka\PMBDS.JT808PubSubToKafka.csproj" />
     <ProjectReference Include="..\PMBDS.PubSub.Abstractions\PMBDS.PubSub.Abstractions.csproj" />
   </ItemGroup>
 
@@ -43,6 +45,9 @@
     </Reference>
     <Reference Include="SuperSocket.Udp">
       <HintPath>DLLs\SuperSocket.Udp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines">
+      <HintPath>DLLs\System.IO.Pipelines.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -19,12 +19,12 @@ namespace PMBDS.JT808PubSubToKafka
         private IConsumer<string, byte[]> _consumer;
 
         public JT808MsgIdConsumer(
-            IOptions<ConsumerConfig> consumerConfigAccessor,
+            ConsumerConfig consumerConfigAccessor,
             ILoggerFactory loggerFactory)
         {
             _logger = loggerFactory.CreateLogger<JT808MsgIdConsumer>();
             _consumer = 
-                new ConsumerBuilder<string, byte[]>(consumerConfigAccessor.Value).Build();
+                new ConsumerBuilder<string, byte[]>(consumerConfigAccessor).Build();
         }
 
         public void Dispose()
@@ -43,7 +43,7 @@ namespace PMBDS.JT808PubSubToKafka
                     {
                         //如果不指定分区，根据kafka的机制会从多个分区中拉取数据
                         //如果指定分区，根据kafka的机制会从相应的分区中拉取数据
-                        //consumer.Assign(new TopicPartition(TopicName,new Partition(0)));
+                        //_consumer.Assign(new TopicPartition(TopicName, new Partition(0)));
                         var data = _consumer.Consume(Cts.Token);
                         if (_logger.IsEnabled(LogLevel.Debug))
                         {

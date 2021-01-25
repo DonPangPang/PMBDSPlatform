@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PMBDS.JT808Tool"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1000">
     <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Width="140" Margin="10">
 
+            </StackPanel>
+            <StackPanel Width="100" Margin="10">
+                <Button Margin="5">断开/恢复油电</Button>
+                <Button Margin="5">超速设置</Button>
+                <Button Margin="5">查询终端参数</Button>
+                <Button Margin="5">设置回传时间</Button>
+                <Button Margin="5" IsEnabled="False">重启指令</Button>
+                <Button Margin="5">APN参数设置</Button>
+                <Button Margin="5" IsEnabled="False">时区设置</Button>
+                <Button Margin="5">服务器参数设置</Button>
+                <Button Margin="5">报警处理</Button>
+                <Button Margin="5">解除警报</Button>
+                <Button Margin="5">里程重置</Button>
+            </StackPanel>
+            <StackPanel Width="700" Margin="10" Orientation="Vertical">
+                <Button x:Name="BtnReceiveConsumer" Click="BtnReceiveConsumer_OnClick">启动</Button>
+                <TextBox x:Name="TbShowMsg" TextWrapping="Wrap" Height="370" VerticalScrollBarVisibility="Auto"></TextBox>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

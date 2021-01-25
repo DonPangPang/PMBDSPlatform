@@ -9,7 +9,7 @@ using PMBDS.PubSub.Abstractions;
 
 namespace PMBDS.JT808PubSubToKafka
 {
-    public class JT808MsgIdProducer: IJT808Producer
+    public class JT808MsgIdProducer: IJT808Producer, IDisposable
     {
         public string TopicName => JT808PubSubConstants.JT808TopicName;
 
@@ -20,9 +20,9 @@ namespace PMBDS.JT808PubSubToKafka
         private ConcurrentDictionary<string, TopicPartition> TopicPartitionCache = new ConcurrentDictionary<string, TopicPartition>();
 
         public JT808MsgIdProducer(
-            IOptions<ProducerConfig> producerConfigAccessor)
+            ProducerConfig producerConfigAccessor)
         {
-            producer = new ProducerBuilder<string, byte[]>(producerConfigAccessor.Value).Build();
+            producer = new ProducerBuilder<string, byte[]>(producerConfigAccessor).Build();
             jT808ProducerPartitionFactory = new JT808MsgIdProducerPartitionFactoryImpl();
             //using (var adminClient = new AdminClientBuilder(producer.Handler).Build())
             //{
@@ -70,6 +70,11 @@ namespace PMBDS.JT808PubSubToKafka
             producer.Dispose();
         }
 
+        public void Flush()
+        {
+            producer.Flush();
+        }
+
         public void ProduceAsync(string msgId, string terminalNo, byte[] data)
         {
             TopicPartition topicPartition;
@@ -78,11 +83,12 @@ namespace PMBDS.JT808PubSubToKafka
                 topicPartition = new TopicPartition(TopicName, new Partition(jT808ProducerPartitionFactory.CreatePartition(TopicName, msgId, terminalNo)));
                 TopicPartitionCache.TryAdd(terminalNo, topicPartition);
             }
-            producer.ProduceAsync(topicPartition, new Message<string, byte[]>
+            producer.ProduceAsync(/*topicPartition*/TopicName, new Message<string, byte[]>
             {
                 Key = msgId,
                 Value = data
             });
+            producer.Flush(TimeSpan.FromSeconds(10));
         }
     }
 }

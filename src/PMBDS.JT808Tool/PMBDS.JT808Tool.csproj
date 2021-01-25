@@ -2,8 +2,38 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JT808" Version="2.3.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PMBDS.JT808PubSubToKafka\PMBDS.JT808PubSubToKafka.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SuperSocket.Channel">
+      <HintPath>..\PMBDS.JT808.Gateway\DLLs\SuperSocket.Channel.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.Primitives">
+      <HintPath>..\PMBDS.JT808.Gateway\DLLs\SuperSocket.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.ProtoBase">
+      <HintPath>..\PMBDS.JT808.Gateway\DLLs\SuperSocket.ProtoBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.Server">
+      <HintPath>..\PMBDS.JT808.Gateway\DLLs\SuperSocket.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.SessionContainer">
+      <HintPath>..\PMBDS.JT808.Gateway\DLLs\SuperSocket.SessionContainer.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.Udp">
+      <HintPath>..\PMBDS.JT808.Gateway\DLLs\SuperSocket.Udp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>

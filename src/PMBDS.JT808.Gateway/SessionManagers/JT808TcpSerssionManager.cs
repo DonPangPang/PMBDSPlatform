@@ -47,7 +47,7 @@ namespace PMBDS.JT808.Gateway.SessionManagers
 
         public void TryAdd(IAppSession session)
         {
-            throw new System.NotImplementedException();
+            session["identify"] = "12345678910";
         }
 
         public void RemoveSessionByIdentify(string identify)
